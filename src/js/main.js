@@ -33,45 +33,25 @@ if (matchMedia) {
 
 //Add Google Map
 function myMap()
-{
-    var map = new google.maps.Map(document.getElementById('googleMap'), {
+{   var Gaulois= {lat: 45.5480088,lng: -73.6512243}
+    var mapOptions =  {
         zoom: zoom,
-        center: {lat: 45.5474045, lng: -73.6520244},
+        center: new google.maps.LatLng(Gaulois),
         mapTypeId: 'terrain'
+      };
+    var infowindow = new google.maps.InfoWindow({
+        content:"<div class='row'><div class='w3-third'><img src='./images/Logo-Rugby-Gaulois-RVB.png' class='w3-image w3-opacity-min' style='width:68px'></div><div class='w3-rest'><p><b>Terrain de Rugby Henri-Julien</b></p><p>9300 Rue Saint-Denis, Montréal, QC H2M 1P1</p></div></div>"
+      });
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions)
+    var marker = new google.maps.Marker({position: Gaulois, map: map})
+    infowindow.open(map,marker);
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
       });
 
-      var markers = [
-        ['Gaulois', 45.5474045, -73.6520244]
-      ];
-      function setMarkers(map) {
-        var infowindow = new google.maps.InfoWindow();
-        for (var i = 0; i < markers.length; i++) {
-          var place = markers[i];
-          var marker = new google.maps.Marker({
-            position: {lat: place[1], lng: place[2]},
-            map: map,
-            icon: {
-                scaledSize: new google.maps.Size(48, 36), // scaled size
-                origin: new google.maps.Point(0,0), // origin
-                anchor: new google.maps.Point(24,48), // anchor
-                url: place[3]
-              },
-            title: place[0]
-          });
-
-          google.maps.event.addListener(marker, 'click', (function (marker, i) {
-            return function () {
-                infowindow.setContent(markers[i][0]);
-                infowindow.open(map, marker);
-            }
-        })(marker, i));
-        }
-      }
-      setMarkers(map);
-
-      google.maps.event.addDomListener(window, 'resize', function() {
-        map.setZoom(zoom);
-      });
+    google.maps.event.addDomListener(window, 'resize', function() {
+    map.setZoom(zoom);
+    });
 }
 
 
