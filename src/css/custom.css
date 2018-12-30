@@ -7,12 +7,11 @@ body, html {
     height: 100%;
     color: #3B3B3B;
     line-height: 1.8;
-    background-image: url(/images/fond.jpg)
+    background-color: lightgrey
 }
-a:link {
-  text-decoration: none;
+i {
+  margin-right: 5px
 }
-
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
@@ -24,7 +23,7 @@ a:link {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../images/20160925_101348.jpg');
+    background-image: url('../images/P1020983.jpg');
     min-height: 600px;
 }
 
@@ -37,12 +36,12 @@ a:link {
 /* Third image (Contact) */
 .bgimg-3 {
     background-image: url('../images/P1030553.jpg');
-    min-height: 300px;
+    min-height: 400px;
 }
 /* fourthimage (Contact) */
-.bgimg-3 {
+.bgimg-4 {
   background-image: url('../images/P1030553.jpg');
-  min-height: 300px;
+  min-height: 400px;
 }
 .w3-display-middle {
   width:80%
@@ -56,66 +55,6 @@ a:link {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* carousel temoignages */
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-.mySlides {display:none;}
-
-.w3-panel {
-  padding-top: 16px;
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: black;
-  color: white
-}
-
 
 /* Fading animation */
 .fade {

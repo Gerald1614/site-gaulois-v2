@@ -28,7 +28,6 @@ if (matchMedia) {
         zoom=9
         // console.log("the width of browser is less then 374px") 
     }
-  
   }
 
 
@@ -44,8 +43,6 @@ function myMap()
       var markers = [
         ['Gaulois', 45.5474045, -73.6520244]
       ];
-     
-
       function setMarkers(map) {
         var infowindow = new google.maps.InfoWindow();
         for (var i = 0; i < markers.length; i++) {
@@ -89,47 +86,6 @@ function myFunction() {
     }
 }
 
-//carousel
-var slideIndex = 0;
-var slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("dot");
-
-// Next/previous controls
-function plusSlides(n) {
-  var newslideIndex = slideIndex + n;
-  if(newslideIndex < slides.length && newslideIndex > 0){
-     currentSlide(newslideIndex);
-  }
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  var i;    
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-    slideIndex = n;
-    slides[n-1].style.display = "block";
-    dots[n-1].className += " active";
-}
-
-function showSlides() {
-  var i;
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1} 
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 8000);
-}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
@@ -152,81 +108,39 @@ for (var i = 0; i < links.length; i++) {
   });
 }
 
-    let previousBtn;
-    let nextBtn;
-    let jour_select;
-    let contenu;
-    let photo;
-    let NextPrev;
-function initForfait() {
-    openTab(null, 'descriptif')
+let previousBtn;
+let nextBtn;
+let saison_select;
+let contenu;
+let NextPrev;
+
+function initSaison() {
     previousBtn = document.getElementById("previous");
     nextBtn = document.getElementById("next");
-    jour_select = document.getElementById("jour");
+    saison_select = document.getElementById("saison");
     contenu = document.getElementById("contenu");
-    photo = document.getElementById("photo");
     NextPrev = 0;
-    jour_select.innerHTML = "JOUR " + 1 + " : " + Descriptif_forfait[0].titre;
-    contenu.innerHTML = Descriptif_forfait[0].contenu;
-    photo.src= Descriptif_forfait[0].photo;
-    previousBtn.innerHTML = "&laquo;" 
-    nextBtn.innerHTML = "JOUR 2 " + " &raquo;";
+    saison_select.innerHTML = Descriptif_Saison[0].saison;
+    contenu.innerHTML = Descriptif_Saison[0].contenu;
+    previousBtn.innerHTML = Descriptif_Saison[3].saison
+    nextBtn.innerHTML = Descriptif_Saison[1].saison;
 }
 
 
 function previousDay() {
-
-    if(NextPrev > 0) {
-        NextPrev--;
-        jour_select.innerHTML = "JOUR " + (NextPrev+1) + " : " + Descriptif_forfait[NextPrev].titre;
-        contenu.innerHTML = Descriptif_forfait[NextPrev].contenu;
-        photo.src= Descriptif_forfait[NextPrev].photo;
-        nextBtn.classList.remove("w3-disabled")
-        previousBtn.innerHTML = "&laquo; " + "JOUR " + NextPrev
-        nextBtn.innerHTML = "JOUR " + (NextPrev +2) + " &raquo;";
-    } 
-    if (NextPrev ===1) {
-        previousBtn.innerHTML = "&laquo;"
-        previousBtn.classList.add("w3-disabled")
-    }
-
+    if(NextPrev === 0) { NextPrev = 3 } else {  NextPrev-- };
+    saison_select.innerHTML = Descriptif_Saison[NextPrev].saison;
+    contenu.innerHTML = Descriptif_Saison[NextPrev].contenu;
+    previousBtn.innerHTML = (NextPrev === 0) ?  Descriptif_Saison[3].saison : Descriptif_Saison[NextPrev-1].saison
+    nextBtn.innerHTML = (NextPrev === 3) ?  Descriptif_Saison[0].saison : Descriptif_Saison[NextPrev+1].saison
 
 }
 
 function nextDay() {
-    if(NextPrev <15) {
-        NextPrev++;
-        jour_select.innerHTML = "JOUR " + (NextPrev+1) + " : " + Descriptif_forfait[NextPrev].titre;
-        contenu.innerHTML = Descriptif_forfait[NextPrev].contenu;
-        photo.src= Descriptif_forfait[NextPrev].photo;
-        previousBtn.classList.remove("w3-disabled")
-        previousBtn.innerHTML = "&laquo; " + "JOUR " + NextPrev
-        nextBtn.innerHTML = "JOUR " + (NextPrev +2)+ " &raquo;";
-    } 
-    if (NextPrev ===14) {
-        nextBtn.innerHTML= "&raquo;";
-        nextBtn.classList.add("w3-disabled")
-    }
-
-
+    console.log(NextPrev)
+    if(NextPrev === 3) { NextPrev = 0 } else { NextPrev++};
+    saison_select.innerHTML = Descriptif_Saison[NextPrev].saison;
+    contenu.innerHTML = Descriptif_Saison[NextPrev].contenu;
+    previousBtn.innerHTML = (NextPrev === 0) ?  Descriptif_Saison[3].saison : Descriptif_Saison[NextPrev-1].saison
+    nextBtn.innerHTML = (NextPrev === 3) ?  Descriptif_Saison[0].saison : Descriptif_Saison[NextPrev+1].saison
 }
-
-function openTab(evt, tabName) {
-    var i, x, tablinks;
-    x = document.getElementsByClassName("tab");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    if (evt != null) {
-        for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" w3-border-blue", "");
-         }
-        evt.currentTarget.firstElementChild.className += " w3-border-blue";
-    }
-    
-    document.getElementById(tabName).style.display = "block";
-
-  }
-  
-  
