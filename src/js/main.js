@@ -54,7 +54,6 @@ function myMap()
     });
 }
 
-
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -79,7 +78,7 @@ function toggleFunction() {
 
 // active navbar item
 var linkContainer = document.getElementById("myNavbar");
-var links = linkContainer.getElementsByTagName("a");
+var links = linkContainer.getElementsByClassName("a");
 for (var i = 0; i < links.length; i++) {
   links[i].addEventListener("click", function() {
     var current = linkContainer.getElementsByClassName("w3-black");
@@ -124,3 +123,31 @@ function nextDay() {
     previousBtn.innerHTML = (NextPrev === 0) ?  Descriptif_Saison[3].saison : Descriptif_Saison[NextPrev-1].saison
     nextBtn.innerHTML = (NextPrev === 3) ?  Descriptif_Saison[0].saison : Descriptif_Saison[NextPrev+1].saison
 }
+
+
+//actu rugby francais
+document.onreadystatechange = function(){
+    if(document.readyState === 'complete'){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            loadActu(this);
+        }
+    };
+    xhttp.open("GET", "https://www.lequipe.fr/rss/actu_rss_Rugby.xml", true);
+    xhttp.send();
+    }
+}
+
+function loadActu(xml) {
+    var xmlDoc = xml.responseXML;
+    for (i=0; i<3; i++) {
+    var news = document.getElementById("titre"+i);
+    var tlt = xmlDoc.getElementsByTagName("title")[i+2].childNodes[0].nodeValue;
+    var res = tlt.substr(8);
+    news.innerHTML = res;
+    news.setAttribute('href', xmlDoc.getElementsByTagName("link")[i+2].childNodes[0].nodeValue );
+    news.setAttribute('target', '_blank');
+    news.setAttribute('title', xmlDoc.getElementsByTagName("description")[i+1].childNodes[0].nodeValue );
+  };
+};

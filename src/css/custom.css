@@ -7,8 +7,13 @@ body, html {
     height: 100%;
     color: #3B3B3B;
     line-height: 1.8;
-    background-color: lightgrey
+    background-color: lightgrey;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
 }
+
 i {
   margin-right: 5px
 }
@@ -76,7 +81,7 @@ i {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
         background-attachment: scroll;
     }
 }
