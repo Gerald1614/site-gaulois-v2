@@ -10,8 +10,6 @@ body, html {
     background-color: lightgrey;
     min-height: 100%;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
 }
 
 i {
@@ -79,12 +77,25 @@ i {
   to {opacity: 1}
 }
 
+.sideB {
+  position:relative;
+}
+@media  screen and (min-width: 993px) {
+  .sideB { 
+
+    position: fixed;
+    top: 0;
+    right: 0
+  }
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
         background-attachment: scroll;
     }
 }
+
 
 
 p.shine

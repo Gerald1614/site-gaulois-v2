@@ -15,40 +15,51 @@
   </head>
 
   <body onload="return initSaison()">
+
+
     <!-- Navbar (sit on top) -->
-    <div class="w3-top">
+ 
+      <div class=" w3-top w3-col l9 m12">
       <div class="w3-bar w3-white" id="myNavbar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#accueil" class="w3-bar-item w3-button w3-black w3-hover-black w3-opacity-min"><i class="fa fa-home"></i></a>
-        <a href="#rugby" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class="fa fa-football-ball"></i>Le rugby</a>
-        <a href="#gaulois" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class="fa fa-globe"></i>L'école des Gaulois</a>
-        <a href="#horaire" class="w3-bar-item  w3-hover-black w3-button w3-hide-small w3-opacity-min"><i class="fa fa-calendar"></i>Saisons et horaires des pratiques</a>
-        <a href="#inscriptions" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class="fa fa-user-plus"></i>Inscriptions</a>
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-hover-black w3-opacity-min"><i class="fa fa-caret-down"></i>Chartres</i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-opacity-min">
-            <a href="/charte_joueur.html" class="w3-bar-item w3-button w3-hide-small w3-opacity-min"><i class="fa fa-address-card"></i>Charte du joueur</a>
-            <a href="/charte_parent.html" class="w3-bar-item w3-button w3-hide-small w3-opacity-min"><i class="fa fa-address-card"></i>Charte des parents</a>
-            <a href="/charte_coach.html" class="w3-bar-item w3-button w3-hide-small w3-opacity-min"><i class="fa fa-address-card"></i>Charte du coach</a>
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu"><i class="fas fa-bars"></i></a>
+        <a href="#accueil" class="w3-bar-item w3-button w3-black w3-hover-black w3-opacity-min"><i class="w3-hide-medium fas fa-home"></i></a>
+        <a href="#rugby" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class=" w3-hide-medium fas fa-football-ball"></i>Le rugby</a>
+        <a href="#gaulois" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class="w3-hide-medium fas fa-globe"></i>L'école des Gaulois</a>
+        <a href="#horaire" class="w3-bar-item  w3-hover-black w3-button w3-hide-small w3-opacity-min"><i class="w3-hide-medium fas fa-calendar"></i>Saisons et horaires des pratiques</a>
+        <a href="#inscriptions" class="w3-bar-item w3-button w3-hover-black w3-hide-small w3-opacity-min"><i class="w3-hide-medium fas fa-user-plus"></i>Inscriptions</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button w3-hover-black w3-opacity-min">Chartres <i class="w3-hide-medium fas fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="/charte_joueur.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Charte du joueur</a>
+            <a href="/charte_parent.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Charte des parents</a>
+            <a href="/charte_coach.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Charte du coach</a>
           </div>
         </div>
 
-        <a href="#contact" class="w3-bar-item w3-hover-black w3-button w3-hide-small w3-opacity-min"><i class="fa fa-envelope"></i>Contact</a>
+        <a href="#contact" class="w3-bar-item w3-hover-black w3-button w3-hide-small w3-opacity-min"><i class="w3-hide-medium fas fa-envelope"></i>Contact</a>
       </div>
 
       <!-- Navbar on small screens -->
       <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large  w3-hide-medium">
-        <a href="#corse" class="w3-bar-item w3-hover-black w3-button" onclick="toggleFunction()">CORSE</a>
-        <a href="#kyrnea" class="w3-bar-item w3-button" onclick="toggleFunction()">VOYAGER AVEC KYRNEA</a>
-        <a href="/forfait.html" class="w3-bar-item w3-button" onclick="toggleFunction()">FORFAIT EXCLUSIF</a>
-        <a href="#temoignages" class="w3-bar-item w3-button" onclick="toggleFunction()">TEMOIGNAGES CLIENTS</a>
-        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-
+        <a href="#rugby" class="w3-bar-item w3-hover-black w3-button" onclick="toggleFunction()">Le rugby</a>
+        <a href="#gaulois" class="w3-bar-item w3-button" onclick="toggleFunction()">L'école des Gaulois</a>
+        <a href="#horaire" class="w3-bar-item w3-button" onclick="toggleFunction()">Saisons et horaires</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-hover-black">Chartres <i class="fas fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="/charte_joueur.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fas fa-address-card"></i>Charte du joueur</a>
+              <a href="/charte_parent.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fas fa-address-card"></i>Charte des parents</a>
+              <a href="/charte_coach.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fas fa-address-card"></i>Charte du coach</a>
+            </div>
+        </div>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
       </div>
-    </div>
-    <div class="row">
-      <div class="w3-threequarter">
+      </div>
 
+
+
+  <div class="row">
+    <div class="w3-col l9 m12">
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container" id="accueil">
       <div class="w3-display-topleft" style="margin-top:50px"  >
@@ -93,7 +104,7 @@
         </div>
       <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-        <H3><b><i class="fa fa-graduation-cap w3-margin-right"></i>La vocation de l’école et les moyens mis en oeuvre</b></H3>
+        <H3><b><i class="fas fa-graduation-cap w3-margin-right"></i>La vocation de l’école et les moyens mis en oeuvre</b></H3>
         </div>
       <div class="w3-col m6 w3-center w3-padding-large"> <img src="../images/P1020983.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="image" width="150" height="333">
       </div>
@@ -272,42 +283,42 @@
       <div class="w3-row w3-padding-16 w3-section w3-flat-silver w3-opacity">
           <h3 class="w3-center w3-black">Nos coordonnées</h3>
           <div class="w3-large w3-col m6">
-            <p class="w3-margin-left"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Email: <a href="mailto:info@clubrugbygaulois.com" target="_blank">info@clubrugbygaulois.com</a></p>
+            <p class="w3-margin-left"><i class="fas fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Email: <a href="mailto:info@clubrugbygaulois.com" target="_blank">info@clubrugbygaulois.com</a></p>
           </div>
           <div class="w3-large w3-col m6">
-              <p class="w3-margin-left"><i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Téléphone: <a href="tel:+1514xxxxxxx" target="_blank">+1 514 xxx xxx</a></p>
+              <p class="w3-margin-left"><i class="fas fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Téléphone: <a href="tel:+1514xxxxxxx" target="_blank">+1 514 xxx xxx</a></p>
           </div>
         </div>
         <div class="w3-row w3-padding-32 w3-section">
           <!-- Add Google Maps -->
           <div id="googleMap" class="w3-round-large w3-greyscale w3-mobile" style="width:100%;height:400px;"></div>
         </div>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd87uN0GiPaOLaDwTMoTsZGbP3YDB6wNo3NBwQ_lqJBPFkEKw/viewform?embedded=true" style="width:100%; height:1260px; border:0px; margin:0px;"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd87uN0GiPaOLaDwTMoTsZGbP3YDB6wNo3NBwQ_lqJBPFkEKw/viewform?embedded=true" style="width:100%; height:960px; border:0px; margin:0px;"></iframe>
       </div>
     </div>
-    <div class="w3-quarter">
-      <div class="row w3-hide-small" style="position:fixed;top:45px; width: 100%">
-          <div id="fb-root"></div>
-          <div  class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL/">Les Gaulois de Montréal</a></blockquote>
-          </div>
-
-          <div class=" w3-margin-top w3-card-4 w3-round w3-white"style="max-width:400px">
-            <h3 class="w3-text-indigo" style="margin:0px">Nouvelles du monde (francais) du rugby:</h3>
-            <a id="titre0"></a><br><a id="titre1"></a><br><a id="titre2"></a>
-          </div>
-      </div>
+    <div class=" w3-col l3 m12 sideB">
+        <div class="w3-container" style="top:45px; width: 100%">
+            <div id="fb-root"></div>
+            <div  class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL/">Les Gaulois de Montréal</a></blockquote>
+            </div>
+  
+            <div class=" w3-margin-top w3-padding w3-card-4 w3-round w3-white"style="max-width:500px">
+              <h3 class="w3-text-indigo" style="margin:0px">Nouvelles du monde (francais) du rugby:</h3>
+              <a id="titre0"></a><br><a id="titre1"></a><br><a id="titre2"></a>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding w3-hover-opacity-off">
-        <div class="w3-right w3-margin">
-            <a href="#accueil" class="w3-button w3-dark-grey"><i class="fa fa-arrow-up"></i>Haut de la page</a>
+        <div class="w3-left w3-margin">
+            <a href="#accueil" class="w3-button w3-dark-grey"><i class="fas fa-arrow-up"></i>Haut de la page</a>
         </div>
         <div class="w3-xlarge w3-section">
-          <i class="fa fa-facebook w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-twitter w3-hover-opacity"></i>
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
+          <i class="fab fa-facebook w3-hover-opacity"></i>
+          <i class="fab fa-instagram w3-hover-opacity"></i>
+          <i class="fab fa-twitter w3-hover-opacity"></i>
+          <i class="fab fa-linkedin w3-hover-opacity"></i>
           <span class="w3-small w3-text-gray"><i>website designed by <a href="www.gegeraptor.com" target="_blank">gegeraptor&copy;</a></i></span>
         </div>
       </footer>

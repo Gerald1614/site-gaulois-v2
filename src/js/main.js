@@ -1,46 +1,14 @@
 
-//const Base_URL = "http://127.0.0.1:8887";
-
-
-//responsive design : adjust zoom of google map to size of screen
-var zoom;
-var mqls = [ // list of window.matchMedia() queries
-    window.matchMedia("(min-width: 600px)"),
-    window.matchMedia("(min-width: 374px)")
-]
-if (matchMedia) {
-    for (var i=0; i<mqls.length; i++){ // loop through queries
-        WidthChange(mqls[i]) // call handler function explicitly at run time
-        mqls[i].addListener(WidthChange) // call handler function whenever the media query is triggered
-    }
-  }
-  
-  // media query change
-  function WidthChange(mql) {
-    if (mqls[0].matches) {
-        // console.log("the width of browser is more then 600px") 
-        zoom=11
-    } 
-    else if (mqls[1].matches) {
-        zoom=10
-        // console.log("the width of browser is less then 600px") 
-    } else {
-        zoom=9
-        // console.log("the width of browser is less then 374px") 
-    }
-  }
-
-
 //Add Google Map
 function myMap()
 {   var Gaulois= {lat: 45.5480088,lng: -73.6512243}
     var mapOptions =  {
-        zoom: zoom,
+        zoom: 11,
         center: new google.maps.LatLng(Gaulois),
         mapTypeId: 'terrain'
       };
     var infowindow = new google.maps.InfoWindow({
-        content:"<div class='row'><div class='w3-third'><img src='./images/Logo-Rugby-Gaulois-RVB.png' class='w3-image w3-opacity-min' style='width:68px'></div><div class='w3-rest'><p><b>Terrain de Rugby Henri-Julien</b></p><p>9300 Rue Saint-Denis, Montréal, QC H2M 1P1</p></div></div>"
+        content:"<p><b>Terrain de Rugby des Gaulois</b></p> <p>Parc Henri-Julien</p><p>9300 Rue Saint-Denis, Montréal, QC H2M 1P1</p>"
       });
     var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions)
     var marker = new google.maps.Marker({position: Gaulois, map: map})
@@ -48,9 +16,7 @@ function myMap()
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
       });
-
     google.maps.event.addDomListener(window, 'resize', function() {
-    map.setZoom(zoom);
     });
 }
 
