@@ -16,8 +16,10 @@ i {
   margin-right: 5px
 }
 
+
+
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,13 +38,19 @@ i {
     min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* third image (forfait) */
 .bgimg-3 {
+    background-image: url('../images/20160925_101348.jpg');
+    min-height: 400px;
+}
+
+/* Fourth image (Contact) */
+.bgimg-4 {
     background-image: url('../images/P1030553.jpg');
     min-height: 400px;
 }
-/* fourthimage (Contact) */
-.bgimg-4 {
+/* fifth image (Contact) */
+.bgimg-5 {
   background-image: url('../images/P1030553.jpg');
   min-height: 400px;
 }
