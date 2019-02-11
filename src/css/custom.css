@@ -16,6 +16,10 @@ i {
   margin-right: 5px
 }
 
+svg{
+    display: block;
+    margin: auto;
+}
 
 
 /* Create a Parallax Effect */
@@ -67,22 +71,23 @@ i {
     margin-right: auto;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 4s;
-  animation-name: fade;
-  animation-duration: 4s;
+.ball, text {
+    opacity:0.8;
+    fill: white
+ 
 }
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.ball:hover + text {
+    opacity:1;
+    font-size: 120%;
+    fill: #F2D67D
 }
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.ball:hover {
+    opacity:1;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Safari 3-8 */
+    transform: rotate(-20deg); 
 }
 
 .sideB {

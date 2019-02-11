@@ -14,7 +14,7 @@
       <link rel="icon" type="image/png" href="./images/LogoGaulois_256.png">
   </head>
 
-  <body onload="return initSaison()">
+  <body>
 
     <!-- Navbar (sit on top) -->
  
@@ -173,25 +173,50 @@
       </div>
       </div>
 
-
     <!-- third Parallax Image with forfait Text -->
-    <div class="bgimg-3 w3-display-container"  id="programme">
+    <div class="bgimg-3 w3-display-container" id="programme">
         <div class="w3-display-middle w3-black w3-opacity-min">
           <h3 class="w3-center w3-xxlarge w3-text-white w3-wide">Programme</h3>
         </div>
       </div>
-      <!-- Container (Gaulois Section) -->
-    <div class="w3-content w3-container w3-padding-64">
-        <div class="w3-card-4 w3-margin-bottom w3-metro-dark-blue w3-padding">
-            <header class="w3-container w3-metro-dark-blue">
-                <button id="previous" onclick="previousDay()" class=" w3-ripple w3-round w3-margin w3-button w3-hover-blue w3-metro-blue  w3-left"></button>
-                <button id="next" onclick="nextDay()" class=" w3-ripple w3-round w3-margin w3-button w3-metro-blue  w3-hover-blue w3-right"></button>
-              <h3 class="w3-center" id="saison"></h3>
-            </header>
-            <div class="w3-container w3-white">
-                  <p id="contenu"></p>
-            </div>
-            </div>
+      <!-- Container (Programme Section) -->
+
+      <div style="text-align:center">
+        <h3>Pratiques les Samedis matins de 9h30 à 11h30</h3>
+        <h4>Tournois les Dimanches de 9h00 à 13h00</h4>
+      </div> 
+      <div class="w3-content w3-display-container w3-padding-64">
+        <svg height="650" width="410" class="w3-metro-dark-blue">
+            <line x1="30" y1="20" x2="30" y2="600" style="stroke: white;stroke-width:6" />
+            <line x1="380" y1="20" x2="380" y2="600" style="stroke: white;stroke-width:6" />
+            <line x1="30" y1="400" x2="380" y2="400" style="stroke: white;stroke-width:6" />
+            <rect x="10" y="450" width="40" height="150" style="fill:white;stroke-width:2;stroke:grey" />
+            <rect x="360" y="450" width="40" height="150" style="fill:white;stroke-width:2;stroke:grey" />
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="40" y="575" height="60px" width="60px"/>
+            <text font-size="14" x="140" y="600">Octobre à Décembre</text>
+            <text font-size="14" x="140" y="620">Pratiques Samedi Matins</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="80" y="480" height="55px" width="55px"/>
+            <text font-size="14" x="180" y="505">Septembre</text>
+            <text font-size="14" x="180" y="525">Clôture de Saison</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="120" y="390" height="50px" width="50px"/>
+            <text font-size="14" x="200" y="415">Mi_Aout à Mi-Septembre</text>
+            <text font-size="14" x="200" y="435">Pratiques et tournois</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="160" y="300" height="45px" width="45px"/>
+            <text font-size="14" x="240" y="320">Juillet</text>
+            <text font-size="14" x="240" y="340">BBQ Mi-Saison</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="220" y="220" height="40px" width="40px"/>
+            <text font-size="14" x="40" y="230">Mai</text>
+            <text font-size="14" x="40" y="250">BBQ Lancement de saison</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="260" y="150" height="35px" width="35px"/>
+            <text font-size="14" x="60" y="160">Mi-Avril à Mi-Juillet</text>
+            <text font-size="14" x="60" y="180">Saison régulière et Tournois</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="300" y="90" height="30px" width="30px"/>
+            <text font-size="14" x="80" y="100">Avril</text>
+            <text font-size="14" x="80" y="120">Jeux de Montréal</text>
+            <image class="ball" xlink:href="./images/ballon-rugby-barbarians.png" x="340" y="40" height="20px" width="20px"/>
+            <text font-size="14" x="100" y="40">Janvier à Mars</text>
+            <text font-size="14" x="100" y="60">Session Hiver : Pratiques Samedis</text>
+          </svg>
     </div>
 
     <!-- fourth Parallax Image with forfait Text -->
