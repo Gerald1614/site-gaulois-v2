@@ -23,7 +23,7 @@ svg{
 
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg5 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,13 +32,13 @@ svg{
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../images/P1020983.jpg');
+    background-image: url('../images/NDG-Rugby-Tournament-23.jpg');
     min-height: 600px;
 }
 
 /* Second image (forfait) */
 .bgimg-2 {
-    background-image: url('../images/20160925_101348.jpg');
+    background-image: url('../images/19092969209519990626.jpg');
     min-height: 400px;
 }
 
@@ -50,12 +50,12 @@ svg{
 
 /* Fourth image (Contact) */
 .bgimg-4 {
-    background-image: url('../images/P1030553.jpg');
+    background-image: url('../images/DSC_0757.jpg');
     min-height: 400px;
 }
 /* fifth image (Contact) */
 .bgimg-5 {
-  background-image: url('../images/P1030553.jpg');
+  background-image: url('../images/NDG-Rugby-Tournament-30.jpg');
   min-height: 400px;
 }
 .w3-display-middle {
@@ -93,9 +93,9 @@ svg{
 .sideB {
   position:relative;
 }
+
 @media  screen and (min-width: 993px) {
   .sideB { 
-
     position: fixed;
     top: 0;
     right: 0
@@ -104,7 +104,7 @@ svg{
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
         background-attachment: scroll;
     }
 }
@@ -113,7 +113,7 @@ svg{
 
 p.shine
 {
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0 auto;
     width: 60%;
 }
@@ -121,14 +121,14 @@ p.shine
 /* shining text effect */
 .shine
 {
-    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    background: #fff -webkit-gradient(linear, left top, right top, from(#808080), to(#808080), color-stop(0.5, #fff)) 0 0 no-repeat;
     -webkit-background-size: 125px;
     
     color: rgba(255, 255, 255, 0.1);
     -webkit-background-clip: text;
     
     -webkit-animation-name: shine;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
 }
 
