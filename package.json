@@ -20,6 +20,7 @@
     "@babel/register": "^7.0.0",
     "browser-sync": "latest",
     "del": "latest",
+    "gulp": "github:gulpjs/gulp",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "latest",
     "gulp-csso": "latest",
@@ -28,7 +29,6 @@
     "gulp-terser": "latest"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "gulp": "github:gulpjs/gulp"
+    "@babel/polyfill": "^7.2.5"
   }
 }

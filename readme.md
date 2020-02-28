@@ -6,6 +6,8 @@
   
   cd <repository>
 
+  yarn install
+
   serve through http server
 
 ### Prerequisites
