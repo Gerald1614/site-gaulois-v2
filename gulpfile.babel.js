@@ -23,10 +23,14 @@ const paths = {
   scripts: {
     src: 'src/js/**/*.js',
     dest: 'dist/js'
+  },
+  uploads: {
+    src: 'src/uploads/**/*.pdf',
+    dest: 'dist/uploads'
   }
 };
 
-const watch = () => gulp.watch('src/**', gulp.series([scripts, pages, styles], reload));
+const watch = () => gulp.watch('src/**', gulp.series([scripts, pages, styles, uploads], reload));
 
 function reload(done) {
   server.reload();
@@ -76,7 +80,10 @@ export function styles() {
     .pipe(csso())
     .pipe(gulp.dest(paths.styles.dest));
 }
-
+export function uploads() {
+  return gulp.src(paths.uploads.src)
+    .pipe(gulp.dest(paths.uploads.dest));
+}
 
 // Gulp task to minify HTML files
 export function pages() {
@@ -90,8 +97,8 @@ export function pages() {
 
 export const clean = () => del([ 'dist' ]);
 
-export const dev = gulp.series(clean, imagecomp, scripts, styles, pages,  serve, watch);
-export const build = gulp.series(clean, imagecomp, scripts, styles, pages);
+export const dev = gulp.series(clean, imagecomp, scripts, styles, pages, uploads, serve, watch);
+export const build = gulp.series(clean, imagecomp, scripts, styles, pages, uploads);
 
      
 
