@@ -43,30 +43,27 @@
         <a href="/index.html#programme" class="w3-bar-item w3-button" onclick="toggleFunction()">Programme</a>
         <a href="/index.html#inscriptions" class="w3-bar-item w3-button" onclick="toggleFunction()">Inscriptions</a>
         <div class="w3-dropdown-hover">
-            <button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="/nos_valeurs.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Nos Valeurs</a>
-              <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Réglements généraux</a>
-            </div>
-        </div>
-          <a href="/integrite.html" class="w3-bar-item w3-button">Integrité</a>
+					<button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
+					<div class="w3-dropdown-content w3-bar-block w3-card-4">
+						<a href="/nos_valeurs.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Valeurs et Chartes</a>
+						<a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">Réglements généraux</a>
+					</div>
+			</div>
+          <a href="/integrite.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Integrité</a>
           <a href="/index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
       </div>
       </div>
 
   <div class="row">
     <div class="w3-col l9 m12 w3-padding-64">
-
-    <!-- Container (rugby Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="rugby">
-      <div class="w3-center w3-metro-dark-blue w3-padding">
-          <h2 >Réglements généraux des Gaulois</h2>
-					
-    <p><a href="./uploads/Gaulois_Reglements_Generaux_20210221.pdf" target="_blank">Télécharger les réglements généraux</a>.</p>
-         </div>
-
-
-
+			<div class="w3-content w3-container w3-padding-64">
+				<div class="w3-center w3-metro-dark-blue w3-padding">
+						<h2 >Réglements généraux</h2>
+						<p><img src="../images/LogoGaulois_256.png"  alt="Gaulois" style="width:15%;"><a href="./uploads/Gaulois_Reglements_Generaux_20210304.pdf" target="_blank">Télécharger les réglements généraux des Gaulois</a>.</p>     	
+						<p><img src="../images/Logo_Rugby_Quebec.png"  alt="rugby Quebec" style="width:15%;"><a href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/97ebe1442e4d44537f51060b35bbd2d34f21aac8.pdf" target="_blank">Télécharger les réglements généraux de Rugby Québec</a>.</p>
+				</div>
+			</div>
+		</div>
     <!-- right column -->
     <div class=" w3-col l3 m12 sideB">
       <div class="w3-row w3-display w3-metro-dark-blue">
@@ -81,8 +78,8 @@
               </div>
           </div>  
       </div>
-    </div>
-</div>
+		</div>
+	</div>
 
   <!-- Footer -->
   <footer class="w3-center w3-metro-dark-blue w3-hover-opacity-off">
@@ -97,7 +94,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHlbM_1W20XRMGEu-0zcsaR_yduGDf3PI&callback=myMap"></script>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;

@@ -43,24 +43,27 @@
         <a href="/index.html#programme" class="w3-bar-item w3-button" onclick="toggleFunction()">Programme</a>
         <a href="/index.html#inscriptions" class="w3-bar-item w3-button" onclick="toggleFunction()">Inscriptions</a>
         <div class="w3-dropdown-hover">
-            <button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Nos Valeurs</a>
-              <a href="/reglements_generaux.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Réglements généraux</a>
-            </div>
-        </div>
-          <a href="/integrite.html" class="w3-bar-item w3-button">Integrité</a>
+					<button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
+					<div class="w3-dropdown-content w3-bar-block w3-card-4">
+						<a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">Valeurs et Chartes</a>
+						<a href="/reglements_generaux.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Réglements généraux</a>
+					</div>
+			</div>
+          <a href="/integrite.html" class="w3-bar-item w3-button"  onclick="toggleFunction()">Integrité</a>
           <a href="/index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
       </div>
-      </div>
+    </div>
 
   <div class="row">
-    <div class="w3-col l9 m12 w3-padding-64">
+    <div class="w3-col l9 m12 w3-padding-64">		
+			<div class="w3-content w3-container w3-padding-64">
       <div class="w3-center w3-metro-dark-blue w3-padding">
 				<h1>Valeurs et Chartes</h1>
 				<iframe src="./uploads/Gaulois_Valeurs_et_Chartes.pdf" width="90%" height="900px">
 				</iframe>
-
+      </div>
+			</div>
+    </div>
     <!-- right column -->
     <div class=" w3-col l3 m12 sideB">
       <div class="w3-row w3-display w3-metro-dark-blue">
@@ -74,8 +77,8 @@
               <div  style="margin:5px" class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL/">Les Gaulois de Montréal</a></blockquote>
               </div>
           </div>  
-      </div>
-    </div>
+				</div>
+		</div>
 </div>
 
   <!-- Footer -->
@@ -91,7 +94,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHlbM_1W20XRMGEu-0zcsaR_yduGDf3PI&callback=myMap"></script>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;

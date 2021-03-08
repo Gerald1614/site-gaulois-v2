@@ -43,20 +43,19 @@
         <a href="/index.html#programme" class="w3-bar-item w3-button" onclick="toggleFunction()">Programme</a>
         <a href="/index.html#inscriptions" class="w3-bar-item w3-button" onclick="toggleFunction()">Inscriptions</a>
         <div class="w3-dropdown-hover">
-            <button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="/nos_valeurs.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Nos Valeurs</a>
-              <a href="/reglements_generaux.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fas-address-card"></i>Réglements généraux</a>
-            </div>
-        </div>
-          <a href="" class="w3-bar-item w3-button">Integrité</a>
+          <button class="w3-button w3-hover-black">Nos Valeurs <i class="fas fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="/nos_valeurs.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Valeurs et Chartes</a>
+            <a href="/reglements_generaux.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Réglements généraux</a>
+          </div>
+      </div>
+          <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">Integrité</a>
           <a href="/index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
       </div>
       </div>
 
   <div class="row">
-    <div class="w3-col l9 m12">
-    <!-- Container (rugby Section) -->
+    <div class="w3-col l9 m12 w3-padding-64" >
     <div class="w3-content w3-container w3-padding-64 w3-metro-dark-blue">
       <div class="w3-row w3-display w3-padding-32  w3-margin-left">
 
@@ -77,7 +76,9 @@
         <p><a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/961c7d290523229df28238653c4d7ff338659b7b.pdf" rel="noopener noreferrer" target="_blank">Code de Conduite ENTRAÎNEUR</a> /&nbsp;<a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/6f5210dcdd9f9b118b798b649ef28a46cecefd6a.pdf" rel="noopener noreferrer" target="_blank">COACH’S Code of Conduct</a></p>
         <p><a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/8a335c6f0348a2ccd61df985df65b6c2a8c54411.pdf" rel="noopener noreferrer" target="_blank">Code de Conduite JOUEUR</a> /&nbsp;<a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/5bc262ddae3d93859ee765ca78e3b52a9ab48163.pdf" rel="noopener noreferrer" target="_blank">PLAYER'S Code of Conduct</a></p>
         <p><a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/4a0ea1e9947a4e16a9f82c8778b501d692fc46a4.pdf" rel="noopener noreferrer" target="_blank">Code de Conduite OFFICIEL</a> /&nbsp;&nbsp;<a href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/9dd6bb47f45891a9c53da6edae82c1b9254c4809.pdf" rel="noopener noreferrer" target="_blank">OFFICIAL'S Code of Conduct</a></p><p><a class="fr-file" href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/2351011e7a39efe22ca3d3a8868036b3bf124066.pdf" rel="noopener noreferrer" target="_blank">Code De Conduite PARENTS</a> /&nbsp;<a href="https://sportlomo-userupload.s3.amazonaws.com/uploaded/galleries/14159_uploaded/aa67624735ce9b5cc9ce94f25efe47ee05fa77d5.pdf" rel="noopener noreferrer" target="_blank">PARENTS' Code of Conduct</a></p>              
-        </div>
+      </div>
+      </div>
+    </div>
 
     <!-- right column -->
     <div class=" w3-col l3 m12 sideB">
@@ -92,10 +93,9 @@
               <div  style="margin:5px" class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL/">Les Gaulois de Montréal</a></blockquote>
               </div>
           </div>  
-      </div>
     </div>
 </div>
-
+</div>
   <!-- Footer -->
   <footer class="w3-center w3-metro-dark-blue w3-hover-opacity-off">
       <div class="w3-right w3-margin">
@@ -109,7 +109,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHlbM_1W20XRMGEu-0zcsaR_yduGDf3PI&callback=myMap"></script>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
