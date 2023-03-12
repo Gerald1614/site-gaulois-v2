@@ -14,21 +14,20 @@
   "license": "ISC",
   "homepage": "https://github.com/Gerald1614/site-gaulois-v2.git",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/register": "^7.0.0",
-    "browser-sync": "latest",
-    "del": "latest",
-    "gulp": "github:gulpjs/gulp",
+    "browser-sync": "^2.28.3",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-concat": "latest",
-    "gulp-csso": "latest",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
     "gulp-htmlmin": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-terser": "latest"
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.2.5"
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "install": "^0.12.2",
+    "npm": "^6.14.18"
   }
 }
