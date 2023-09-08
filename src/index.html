@@ -58,23 +58,30 @@
     <div class="w3-col l9 m12">
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container" id="accueil">
-      <div class="w3-display-topleft" style="margin-top:50px"  >
+      <div class="w3-display-topleft" style="margin-top:6vh"  >
         <img src="./images/Logo-Rugby-Gaulois-RVB.png" class="w3-image" style="width:163px">
       </div>
       <div>
-        <p class="shine w3-display-topright" style="margin-top:6vh;">Initiation Gratuite / Filles & Garçons de 5 à 14 ans</p>
-        <p class="shine w3-display-topright" style="margin-top:10vh">Pratiques les samedi matins</p>
+        <!-- <p class="shine w3-display-topright" style="margin-top:6vh;">Initiation Gratuite / Filles & Garçons de 5 à 14 ans</p>
+        <p class="shine w3-display-topright" style="margin-top:10vh">Pratiques les samedi matins</p> -->
+        <div class=" w3-text w3-container w3-display-bottomleft w3-margin-left w3-black" style="z-index: 999; text-align: center;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScledpFhG8RFRNVAJIdPIv737OIHhL_N9vYd9uHxPuMg2Jl_g/viewform" target="_blank" class="w3-text w3-text-pink w3-xxlarge ">
+            Cliquez ici <br>pour vous inscrire</a>
+        </div>
+        <div>
+          <img src="../images/20230904_141251_0000.png"  alt="Faites du rugby" class=" w3-margin w3-display-topleft" style="width:90%;">
 
-
+        </div>
      </div>
-      <a  href="https://affiliated-sports.com/fr/collections/les-gaulois-rugby" target="_blank">
+
+      <!-- <a  href="https://affiliated-sports.com/fr/collections/les-gaulois-rugby" target="_blank">
       <div class="w3-display-bottomleft w3-container">
         <p class="w3-text-white w3-large" style="margin-bottom:10px;">La boutique des Gaulois</p>
         <div  style="margin-bottom:10px; width:60%"  >
              <img src="./images/campea_boutique.png" class="w3-image w3-hover-grayscale" width="800px">
         </div>
       </div>
-      </a>
+      </a> -->
       <div class="w3-display-bottomright w3-container" style="margin-bottom:20px"  >
           <img  src="./images/sportMontreal.png" class="w3-image" width="60%" >
       </div>
@@ -368,10 +375,8 @@
       </a>
       </div>
         <div class="w3-display w3-metro-dark-blue" style="top:45px; width: 100%">
-          <div id="fb-root">
-              <div  style="margin:5px" class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL/">Les Gaulois de Montréal</a></blockquote>
-              </div>
-          </div>  
+          <div id="fb-root"></div>  
+          <div class="fb-page" data-href="https://www.facebook.com/EcoleRugbyGauloisMTL" data-show-posts="true" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/EcoleRugbyGauloisMTL" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EcoleRugbyGauloisMTL">Les Gaulois de Montréal</a></blockquote></div>
       </div>
     </div>
 </div>
@@ -388,15 +393,19 @@
       </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="/js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHlbM_1W20XRMGEu-0zcsaR_yduGDf3PI&callback=myMap"></script>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v3.2';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '291207166942271',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v17.0" nonce="H96qEeQp"></script>
 
   </body>
 
